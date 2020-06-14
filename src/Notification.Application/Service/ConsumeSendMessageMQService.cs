@@ -83,8 +83,8 @@ namespace Notification.Application.Service
                 {
                     MessageDto message = new MessageDto()
                     {
-                        Title = $"Hello Word! ({messageCount})",
-                        Content = $"Hello Word! ({messageCount})"
+                        Title = $"Hello World! ({messageCount})",
+                        Content = $"Hello World! ({messageCount})"
                     };
 
                     SendMessageNotification(message);
