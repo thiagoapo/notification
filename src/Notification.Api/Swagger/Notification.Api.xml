@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notification.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Notification.Api.Controllers.AccessController">
+            <summary>
+            Authentications
+            </summary>
+        </member>
+        <member name="M:Notification.Api.Controllers.AccessController.#ctor(Notification.Application.Service.Interface.IAuthenticationService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="authenticationService"></param>
+        </member>
+        <member name="M:Notification.Api.Controllers.AccessController.Post(System.String)">
+            <summary>
+            GetToken 
+            </summary>
+            <param name="login">admin</param>        
+            <returns>object</returns>
+        </member>
+        <member name="T:Notification.Api.Controllers.MessagesController">
+            <summary>
+            Controler to send messages
+            </summary>    
+        </member>
+        <member name="M:Notification.Api.Controllers.MessagesController.#ctor(Notification.Application.Service.Interface.IMessageService,Microsoft.IdentityModel.Tokens.TokenValidationParameters)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="messageService"></param>
+            <param name="tokenValidationParameters"></param>
+        </member>
+        <member name="M:Notification.Api.Controllers.MessagesController.GetReceivedMessages">
+            <summary>
+            Received Messages (Other Ms)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Notification.Api.Controllers.MessagesController.GetSentMessages">
+            <summary>
+            Sent Messages (By this Ms)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Notification.Api.ExceptionHandling.ExceptionHandlingMiddleware">
+            <summary>
+            exception handler
+            </summary>
+        </member>
+        <member name="M:Notification.Api.ExceptionHandling.ExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Notification.Api.ExceptionHandling.ExceptionHandlingMiddleware})">
+            <summary>
+            constructor
+            </summary>
+            <param name="next"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Notification.Api.ExceptionHandling.ExceptionHandlingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            invoke
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notification.Api.ExceptionHandling.ExceptionHandlingMiddleware.ResultResponse(System.Exception,Microsoft.AspNetCore.Http.HttpContext,System.Int32)">
+            <summary>
+            ResultResponse
+            </summary>
+            <param name="ex"></param>
+            <param name="context"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Notification.Api.Me">
+            <summary>
+            MS
+            </summary>
+        </member>
+        <member name="P:Notification.Api.Me.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:Notification.Api.Me.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Notification.Api.Me.Instance">
+            <summary>
+            Instance MS
+            </summary>
+        </member>
+        <member name="T:Notification.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Notification.Api.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Notification.Api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Notification.Api.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:Notification.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            constructor
+            </summary>
+            <param name="configuration"></param>
+            <param name="enviroment"></param>
+        </member>
+        <member name="P:Notification.Api.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:Notification.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            ConfigureServices
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Notification.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configure
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:Notification.Api.Startup.AddJwtAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddJwtAuthorization
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>

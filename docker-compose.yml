@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  api:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    links:
+      - db
+    ports:
+      - 5004:80
+    depends_on:
+      - db
+    environment:
+
+  db:
+    image: postgres:11.5-alpine
+    environment:
+      POSTGRES_PASSWORD: 
